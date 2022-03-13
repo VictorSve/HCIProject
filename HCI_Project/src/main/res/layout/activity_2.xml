@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_2_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentTwo"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_1" />
+
+    <EditText
+        android:id="@+id/assignmentNameEditText"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="120dp"
+        android:hint="@string/assignment_name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_marginStart="25dp"
+        android:id="@+id/dueDateEditText"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/assignmentNameEditText"
+        android:hint="@string/due_date"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginVertical="35dp"
+        android:editable="false"
+        />
+
+    <EditText
+        android:layout_marginStart="25dp"
+        android:id="@+id/timeApproximateEditText"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/dueDateEditText"
+        android:hint="@string/time_approximate"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginVertical="20dp"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/timePerSessionEditText"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/timeApproximateEditText"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="25dp"
+        android:hint="@string/time_per_session"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:editable="false"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cardview_light_background"
+        app:menu="@menu/bottom_nav" />
+
+    <Button
+        android:id="@+id/add_assignment_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timePerSessionEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:alpha="0.4"
+        android:background="@drawable/rounded_corners"
+        android:text="Add Assignment"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/dueDateEditText"
+        android:layout_marginLeft="280dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_corners"
+        android:text="Date"
+        android:alpha="0.4"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/time_spinner"
+        android:layout_width="120dp"
+        android:layout_height="52dp"
+        android:layout_alignTop="@id/timePerSessionEditText"
+        android:layout_marginLeft="280dp"
+        android:contentDescription="@string/choose"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cardview_light_background"
+        app:menu="@menu/bottom_nav" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/container"
+        />
+
+</RelativeLayout>

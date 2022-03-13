@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/book"
+    android:id="@+id/main_container"
+    tools:context=".FragmentOne"
+
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_1"
+        android:contentDescription="@string/an_image" />
+    <Button
+        android:id="@+id/addAssignmentButton"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/rounded_corners"
+        android:text="@string/new_assignment"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:alpha="0.6"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cardview_light_background"
+        app:menu="@menu/bottom_nav" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/container"
+        />
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
+
+</RelativeLayout>

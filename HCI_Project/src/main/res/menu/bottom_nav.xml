@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/settingstab"
+        android:title="@string/back"
+        android:enabled="true"
+        android:color="@color/timetable"
+        android:icon="@drawable/back"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/hometab"
+        android:title="@string/start"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_timer_24"
+        android:color="@color/timetable"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/assignmentstab"
+        android:title="@string/assignments"
+        android:enabled="true"
+        android:color="@color/timetable"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        app:showAsAction="ifRoom"
+        />
+</menu>
